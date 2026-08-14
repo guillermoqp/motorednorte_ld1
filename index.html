@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotoRed Norte | La Red de Talleres y Auxilio para Moteros</title>
+    <meta name="description" content="Encuentra talleres mecánicos de confianza en Trujillo, Virú y Chao según la marca de tu moto. Contacta directo por WhatsApp.">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="MotoRed Norte">
+    <meta property="og:locale" content="es_PE">
+    <meta property="og:title" content="MotoRed Norte | La Red de Talleres y Auxilio para Moteros">
+    <meta property="og:description" content="La 1ª App diseñada por y para moteros en La Libertad. Encuentra el mecánico ideal según la marca de tu moto y contacta directo por WhatsApp.">
+    <meta property="og:url" content="https://guillermoqp.github.io/motorednorte_ld1/">
+    <meta property="og:image" content="https://guillermoqp.github.io/motorednorte_ld1/logo2.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MotoRed Norte | La Red de Talleres y Auxilio para Moteros">
+    <meta name="twitter:description" content="La 1ª App diseñada por y para moteros en La Libertad. Encuentra el mecánico ideal según la marca de tu moto y contacta directo por WhatsApp.">
+    <meta name="twitter:image" content="https://guillermoqp.github.io/motorednorte_ld1/logo2.png">
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5J9T27ZF');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "y2gvsln2sb");
+    </script>
+
+    <!-- Datadog RUM -->
+    <script>
+      (function(h,o,u,n,d) {
+        h=h[d]=h[d]||{q:[],onReady:function(c){h.q.push(c)}}
+        d=o.createElement(u);d.async=1;d.src=n;d.crossOrigin=''
+        n=o.getElementsByTagName(u)[0];n.parentNode.insertBefore(d,n)
+      })(window,document,'script','https://www.datadoghq-browser-agent.com/us1/v7/datadog-rum.js','DD_RUM')
+      window.DD_RUM.onReady(function() {
+        window.DD_RUM.init({
+            applicationId: 'e5835661-368c-46e1-919b-7484bdc0d06a',
+            clientToken: 'pub85579462f5e64de16cc1ea48e828cd19',
+            site: 'datadoghq.com',
+            service: 'motorednorte-landing',
+            env: 'prod',
+            version: '1.0.0',
+            sessionSampleRate: 100,
+            sessionReplaySampleRate: 20,
+            trackResources: true,
+            trackUserInteractions: true,
+            trackLongTasks: true,
+        });
+      })
+    </script>
+
+    <!-- Google Fonts & FontAwesome icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Eventos personalizados: se envían a GTM vía dataLayer (GA4 se configura dentro de GTM) -->
+    <script>
+      function trackEvent(eventName, category, label) {
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({
+              'event': 'custom_event',
+              'event_name': eventName,
+              'event_category': category,
+              'event_label': label
+          });
+      }
+    </script>
+
+    <style>
+        :root {
+            --moche-orange: #E65100;
+            --moche-orange-bright: #FF6D00;
+            --asphalt-dark: #121212;
+            --asphalt-card: #1E1E1E;
+            --asphalt-border: #2C2C2C;
+            --text-white: #FFFFFF;
+            --text-gray: #A0A0A0;
+            --whatsapp-green: #25D366;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background-color: var(--asphalt-dark);
+            color: var(--text-white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .brand-font {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* HEADER & BADGE */
+        header {
+            padding: 25px 0;
+            text-align: center;
+        }
+
+        .logo-container {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(255, 109, 0, 0.08);
+            border: 1px solid rgba(255, 109, 0, 0.3);
+            padding: 8px 20px;
+            border-radius: 50px;
+            margin-bottom: 20px;
+        }
+
+        .logo-img {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .logo-text {
+            font-weight: 900;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--text-white);
+        }
+
+        .badge-location {
+            display: inline-block;
+            background: #2A2A2A;
+            color: var(--moche-orange-bright);
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 6px 14px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+            border: 1px solid #3A3A3A;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            text-align: center;
+            padding: 20px 0 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 900;
+            line-height: 1.15;
+            margin-bottom: 15px;
+            background: linear-gradient(180deg, #FFFFFF 0%, #CCCCCC 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(90deg, #FF6D00 0%, #FF9E80 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p.subtitle {
+            font-size: 1.15rem;
+            color: var(--text-gray);
+            max-width: 650px;
+            margin: 0 auto 35px;
+        }
+
+        /* COUNTDOWN CARD */
+        .hero-logo {
+            margin-bottom: 35px;
+        }
+
+        .hero-logo-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 24px;
+            object-fit: cover;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+        }
+
+        .countdown-card {
+            background: var(--asphalt-card);
+            border: 1px solid var(--asphalt-border);
+            border-radius: 24px;
+            padding: 35px 25px;
+            max-width: 700px;
+            margin: 0 auto 50px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .countdown-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--moche-orange), var(--moche-orange-bright));
+        }
+
+        .countdown-title {
+            font-size: 0.9rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--moche-orange-bright);
+            margin-bottom: 20px;
+        }
+
+        .timer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .timer-box {
+            background: #141414;
+            border: 1px solid #282828;
+            padding: 15px 10px;
+            border-radius: 14px;
+            text-align: center;
+        }
+
+        .timer-number {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: var(--text-white);
+            line-height: 1;
+        }
+
+        .timer-label {
+            font-size: 0.75rem;
+            color: var(--text-gray);
+            text-transform: uppercase;
+            margin-top: 6px;
+            font-weight: 600;
+        }
+
+        /* CTA BUTTONS */
+        .cta-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 16px 28px;
+            border-radius: 14px;
+            font-weight: 800;
+            font-size: 1.05rem;
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-whatsapp {
+            background-color: var(--whatsapp-green);
+            color: #000000;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.25);
+        }
+
+        .btn-form {
+            background-color: transparent;
+            color: var(--text-white);
+            border: 2px solid var(--moche-orange-bright);
+        }
+
+        .btn-form:hover {
+            background-color: rgba(255, 109, 0, 0.1);
+        }
+
+        .social-proof {
+            font-size: 0.85rem;
+            color: var(--text-gray);
+            margin-top: 20px;
+        }
+
+        /* FEATURES SECTION */
+        .features {
+            padding: 40px 0 60px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 40px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+
+        .feature-card {
+            background: var(--asphalt-card);
+            border: 1px solid var(--asphalt-border);
+            padding: 25px;
+            border-radius: 18px;
+            transition: border-color 0.3s ease;
+        }
+
+        .feature-card:hover {
+            border-color: var(--moche-orange);
+        }
+
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 109, 0, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--moche-orange-bright);
+            font-size: 1.4rem;
+            margin-bottom: 18px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 8px;
+        }
+
+        .feature-card p {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid var(--asphalt-border);
+            color: var(--text-gray);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2.1rem; }
+            .timer-number { font-size: 1.7rem; }
+            .countdown-card { padding: 25px 15px; }
+            .hero-logo-img { width: 150px; height: 150px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5J9T27ZF"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="logo1.png" alt="MotoRed Norte" class="logo-img">
+                <span class="logo-text">MotoRed Norte</span>
+            </div>
+            <div>
+                <span class="badge-location"><i class="fa-solid fa-location-dot"></i> Trujillo • Virú • Chao</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>Nunca más te quedes<br><span>tirado en la ruta.</span></h1>
+            <p class="subtitle">La 1ª App diseñada por y para moteros en La Libertad. Encuentra el mecánico ideal según la marca de tu moto y contacta directo por WhatsApp.</p>
+
+            <div class="hero-logo">
+                <img src="logo2.png" alt="MotoRed Norte" class="hero-logo-img">
+            </div>
+
+            <div class="countdown-card">
+                <div class="countdown-title">⏱️ Lanzamiento Oficial de la App (Beta APK)</div>
+                
+                <div class="timer-grid">
+                    <div class="timer-box">
+                        <div class="timer-number" id="days">00</div>
+                        <div class="timer-label">Días</div>
+                    </div>
+                    <div class="timer-box">
+                        <div class="timer-number" id="hours">00</div>
+                        <div class="timer-label">Horas</div>
+                    </div>
+                    <div class="timer-box">
+                        <div class="timer-number" id="minutes">00</div>
+                        <div class="timer-label">Min</div>
+                    </div>
+                    <div class="timer-box">
+                        <div class="timer-number" id="seconds">00</div>
+                        <div class="timer-label">Seg</div>
+                    </div>
+                </div>
+
+                <div class="cta-container">
+                    <!-- BOTÓN PRINCIPAL: GRUPO DE WHATSAPP -->
+                    <a href="https://chat.whatsapp.com/DdRMHGy3E4L6qk2sVv1GR0?s=cl&p=a&ilr=1&fbclid=IwY2xjawTsct1wZG9mBWV4dG4DYWVtAjEwAGJyaWQRMHViMWdySEZvaXg1eG5VT3hzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEeh3RKzOKkxwMgfskP1ryXt39pmAqeFebhIT3dnqkEor0f-hdi0f734NQWe4Y_aem_6NGeUom0k2UBBs5aK1ZW2g" 
+                       target="_blank" 
+                       class="btn btn-whatsapp"
+                       onclick="trackEvent('click_whatsapp_group', 'conversion', 'Boton Grupo Whatsapp')">
+                        <i class="fa-brands fa-whatsapp fa-xl"></i>
+                        <span>Unirme al Grupo Beta en WhatsApp</span>
+                    </a>
+
+                    <!-- BOTÓN SECUNDARIO: REGISTRO DE TALLER -->
+                    <a href="https://forms.gle/65Fz75RxHq8QoujA9" 
+                       target="_blank" 
+                       class="btn btn-form"
+                       onclick="trackEvent('click_register_workshop', 'lead', 'Boton Registrar Taller')">
+                        <i class="fa-solid fa-wrench"></i>
+                        <span>Recomendar o Registrar un Taller</span>
+                    </a>
+                </div>
+
+                <p class="social-proof">🔥 Recibe el APK de prueba antes que nadie y participa en las primeras pruebas en Trujillo.</p>
+            </div>
+        </section>
+
+        <section class="features">
+            <h2 class="section-title">Lo que podrás hacer con la App</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                    <h3>Mapa de Talleres</h3>
+                    <p>Ubica en tiempo real mecánicos activos en Trujillo, La Esperanza, El Porvenir, Víctor Larco y la ruta a Virú y Chao.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-motorcycle"></i></div>
+                    <h3>Filtro por Marca</h3>
+                    <p>Encuentra mecánicos especialistas según tu máquina: Pulsar, Honda, Yamaha, TVS, Zongshen o Royal Enfield.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-comments"></i></div>
+                    <h3>Contacto Directo</h3>
+                    <p>Sin formularios ni esperas. Consulta disponibilidad de repuestos o cotiza directo al WhatsApp del taller.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3>Talleres Verificados</h3>
+                    <p>Información recomendada y validada por la propia comunidad y clubes de moteros del Norte.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p><strong>MotoRed Norte 🇵🇪</strong> — Impulsando la cultura y hermandad motera en La Libertad.</p>
+            <p style="margin-top: 5px;">Desarrollado por GuilleBiker</p>
+        </div>
+    </footer>
+
+    <!-- JS PARA EL CONTADOR REGRESIVO -->
+    <script>
+        // CONFIGURA AQUÍ LA FECHA DE LANZAMIENTO (Año, Mes-1, Día, Hora, Min)
+        const launchDate = new Date(2026, 9, 1, 20, 0, 0).getTime();
+        const timer = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = launchDate - now;
+            if (distance < 0) {
+                clearInterval(timer);
+                document.getElementById("days").innerText = "00";
+                document.getElementById("hours").innerText = "00";
+                document.getElementById("minutes").innerText = "00";
+                document.getElementById("seconds").innerText = "00";
+                return;
+            }
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            document.getElementById("days").innerText = days < 10 ? '0' + days : days;
+            document.getElementById("hours").innerText = hours < 10 ? '0' + hours : hours;
+            document.getElementById("minutes").innerText = minutes < 10 ? '0' + minutes : minutes;
+            document.getElementById("seconds").innerText = seconds < 10 ? '0' + seconds : seconds;
+        }, 1000);
+    </script>
+</body>
+</html>
