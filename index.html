@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MotoRed Norte | La Red de Talleres y Auxilio para Moteros</title>
-    <meta name="description" content="Encuentra talleres mecánicos de confianza en Trujillo, Virú y Chao según la marca de tu moto. Contacta directo por WhatsApp.">
+    <meta name="description" content="Directorio de talleres en tiempo real con geolocalización GPS, Garage Virtual con alertas de SOAT y mantenimiento, y consulta rápida por WhatsApp. Descarga el APK v1.0.0.">
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="MotoRed Norte">
     <meta property="og:locale" content="es_PE">
     <meta property="og:title" content="MotoRed Norte | La Red de Talleres y Auxilio para Moteros">
-    <meta property="og:description" content="La 1ª App diseñada por y para moteros en La Libertad. Encuentra el mecánico ideal según la marca de tu moto y contacta directo por WhatsApp.">
+    <meta property="og:description" content="La 1ª App diseñada por y para moteros en La Libertad. Directorio de talleres en tiempo real, geolocalización GPS, Garage Virtual con alertas de SOAT y mantenimiento, y consulta rápida por WhatsApp. Descarga el APK v1.0.0.">
     <meta property="og:url" content="https://guillermoqp.github.io/motorednorte_ld1/">
     <meta property="og:image" content="https://guillermoqp.github.io/motorednorte_ld1/logo2.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="MotoRed Norte | La Red de Talleres y Auxilio para Moteros">
-    <meta name="twitter:description" content="La 1ª App diseñada por y para moteros en La Libertad. Encuentra el mecánico ideal según la marca de tu moto y contacta directo por WhatsApp.">
+    <meta name="twitter:description" content="La 1ª App diseñada por y para moteros en La Libertad. Directorio de talleres en tiempo real, geolocalización GPS, Garage Virtual con alertas de SOAT y mantenimiento, y consulta rápida por WhatsApp. Descarga el APK v1.0.0.">
     <meta name="twitter:image" content="https://guillermoqp.github.io/motorednorte_ld1/logo2.png">
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -25,6 +25,20 @@
     })(window,document,'script','dataLayer','GTM-5J9T27ZF');</script>
     <!-- End Google Tag Manager -->
 
+    <!-- GTM: medición explícita del dominio/URL de producción -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            'event': 'production_landing_view',
+            'production_url': 'https://guillermoqp.github.io/motorednorte_ld1/',
+            'production_hostname': 'guillermoqp.github.io',
+            'page_hostname': window.location.hostname,
+            'page_path': window.location.pathname,
+            'page_full_url': window.location.href,
+            'is_production_domain': window.location.hostname === 'guillermoqp.github.io' && window.location.pathname === '/motorednorte_ld1/'
+        });
+    </script>
+
     <!-- Microsoft Clarity -->
     <script type="text/javascript">
         (function(c,l,a,r,i,t,y){
@@ -32,6 +46,11 @@
             t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
         })(window, document, "clarity", "script", "y2gvsln2sb");
+
+        window.clarity = window.clarity || function(){(window.clarity.q = window.clarity.q || []).push(arguments);};
+        clarity("set", "production_url", "https://guillermoqp.github.io/motorednorte_ld1/");
+        clarity("set", "environment", "production");
+        clarity("set", "page_url", window.location.href);
     </script>
 
     <!-- Datadog RUM -->
@@ -55,6 +74,10 @@
             trackUserInteractions: true,
             trackLongTasks: true,
         });
+        window.DD_RUM.addRumGlobalContext('production_url', 'https://guillermoqp.github.io/motorednorte_ld1/');
+        window.DD_RUM.addRumGlobalContext('production_hostname', 'guillermoqp.github.io');
+        window.DD_RUM.addRumGlobalContext('page_url', window.location.href);
+        window.DD_RUM.addRumGlobalContext('is_production_domain', window.location.hostname === 'guillermoqp.github.io' && window.location.pathname === '/motorednorte_ld1/');
       })
     </script>
 
@@ -187,7 +210,7 @@
             margin: 0 auto 35px;
         }
 
-        /* COUNTDOWN CARD */
+        /* CTA CARD */
         .hero-logo {
             margin-bottom: 35px;
         }
@@ -200,7 +223,7 @@
             box-shadow: 0 15px 35px rgba(0,0,0,0.5);
         }
 
-        .countdown-card {
+        .cta-card {
             background: var(--asphalt-card);
             border: 1px solid var(--asphalt-border);
             border-radius: 24px;
@@ -212,7 +235,7 @@
             overflow: hidden;
         }
 
-        .countdown-card::before {
+        .cta-card::before {
             content: '';
             position: absolute;
             top: 0;
@@ -222,44 +245,13 @@
             background: linear-gradient(90deg, var(--moche-orange), var(--moche-orange-bright));
         }
 
-        .countdown-title {
+        .cta-title {
             font-size: 0.9rem;
             font-weight: 800;
             letter-spacing: 2px;
             text-transform: uppercase;
             color: var(--moche-orange-bright);
-            margin-bottom: 20px;
-        }
-
-        .timer-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 12px;
-            margin-bottom: 30px;
-        }
-
-        .timer-box {
-            background: #141414;
-            border: 1px solid #282828;
-            padding: 15px 10px;
-            border-radius: 14px;
-            text-align: center;
-        }
-
-        .timer-number {
-            font-family: 'Outfit', sans-serif;
-            font-size: 2.2rem;
-            font-weight: 900;
-            color: var(--text-white);
-            line-height: 1;
-        }
-
-        .timer-label {
-            font-size: 0.75rem;
-            color: var(--text-gray);
-            text-transform: uppercase;
-            margin-top: 6px;
-            font-weight: 600;
+            margin-bottom: 25px;
         }
 
         /* CTA BUTTONS */
@@ -288,6 +280,19 @@
 
         .btn:hover {
             transform: translateY(-2px);
+        }
+
+        .btn-download {
+            background: linear-gradient(90deg, var(--moche-orange) 0%, var(--moche-orange-bright) 100%);
+            color: #FFFFFF;
+            font-size: 1.15rem;
+            padding: 18px 30px;
+            box-shadow: 0 10px 30px rgba(230, 81, 0, 0.4);
+            border: none;
+        }
+
+        .btn-download:hover {
+            box-shadow: 0 14px 35px rgba(255, 109, 0, 0.5);
         }
 
         .btn-whatsapp {
@@ -376,9 +381,9 @@
 
         @media (max-width: 600px) {
             .hero h1 { font-size: 2.1rem; }
-            .timer-number { font-size: 1.7rem; }
-            .countdown-card { padding: 25px 15px; }
+            .cta-card { padding: 25px 15px; }
             .hero-logo-img { width: 150px; height: 150px; }
+            .btn-download { font-size: 1rem; padding: 16px 20px; }
         }
     </style>
 </head>
@@ -404,36 +409,26 @@
     <main class="container">
         <section class="hero">
             <h1>Nunca más te quedes<br><span>tirado en la ruta.</span></h1>
-            <p class="subtitle">La 1ª App diseñada por y para moteros en La Libertad. Encuentra el mecánico ideal según la marca de tu moto y contacta directo por WhatsApp.</p>
+            <p class="subtitle">La 1ª App diseñada por y para moteros en La Libertad. Directorio de talleres en tiempo real con geolocalización GPS, Garage Virtual con alertas de SOAT y mantenimiento, y consulta rápida por WhatsApp o llamada.</p>
 
             <div class="hero-logo">
                 <img src="logo2.png" alt="MotoRed Norte" class="hero-logo-img">
             </div>
 
-            <div class="countdown-card">
-                <div class="countdown-title">⏱️ Lanzamiento Oficial de la App (Beta APK)</div>
-                
-                <div class="timer-grid">
-                    <div class="timer-box">
-                        <div class="timer-number" id="days">00</div>
-                        <div class="timer-label">Días</div>
-                    </div>
-                    <div class="timer-box">
-                        <div class="timer-number" id="hours">00</div>
-                        <div class="timer-label">Horas</div>
-                    </div>
-                    <div class="timer-box">
-                        <div class="timer-number" id="minutes">00</div>
-                        <div class="timer-label">Min</div>
-                    </div>
-                    <div class="timer-box">
-                        <div class="timer-number" id="seconds">00</div>
-                        <div class="timer-label">Seg</div>
-                    </div>
-                </div>
+            <div class="cta-card">
+                <div class="cta-title">🚀 MotoRed Norte ya está disponible</div>
 
                 <div class="cta-container">
-                    <!-- BOTÓN PRINCIPAL: GRUPO DE WHATSAPP -->
+                    <!-- BOTÓN PRINCIPAL: DESCARGAR APK -->
+                    <a href="https://github.com/guillermoqp/motorednorte_app/releases/download/1.0.0/app-arm64-v8a-release.apk"
+                       target="_blank"
+                       class="btn btn-download"
+                       onclick="trackEvent('click_download_apk', 'conversion', 'Descargar APK v1.0.0')">
+                        <i class="fa-solid fa-download fa-xl"></i>
+                        <span>Descargar APK v1.0.0 (23.5 MB)</span>
+                    </a>
+
+                    <!-- BOTÓN: GRUPO DE WHATSAPP -->
                     <a href="https://chat.whatsapp.com/DdRMHGy3E4L6qk2sVv1GR0?s=cl&p=a&ilr=1&fbclid=IwY2xjawTsct1wZG9mBWV4dG4DYWVtAjEwAGJyaWQRMHViMWdySEZvaXg1eG5VT3hzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEeh3RKzOKkxwMgfskP1ryXt39pmAqeFebhIT3dnqkEor0f-hdi0f734NQWe4Y_aem_6NGeUom0k2UBBs5aK1ZW2g" 
                        target="_blank" 
                        class="btn btn-whatsapp"
@@ -452,7 +447,7 @@
                     </a>
                 </div>
 
-                <p class="social-proof">🔥 Recibe el APK de prueba antes que nadie y participa en las primeras pruebas en Trujillo.</p>
+                <p class="social-proof">📱 APK v1.0.0 para Android (arm64-v8a). Descárgala, instálala y únete a la red de moteros del Norte.</p>
             </div>
         </section>
 
@@ -461,23 +456,23 @@
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon"><i class="fa-solid fa-map-location-dot"></i></div>
-                    <h3>Mapa de Talleres</h3>
-                    <p>Ubica en tiempo real mecánicos activos en Trujillo, La Esperanza, El Porvenir, Víctor Larco y la ruta a Virú y Chao.</p>
+                    <h3>Directorio en Tiempo Real</h3>
+                    <p>Listado de talleres en vivo con filtros por distrito, marca y especialidad. Encuentra al mecánico ideal para tu moto al instante.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-location-crosshairs"></i></div>
+                    <h3>Geolocalización GPS</h3>
+                    <p>Captura tus coordenadas GPS para recomendar talleres y localizar el más cercano en Trujillo, Virú y Chao.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon"><i class="fa-solid fa-motorcycle"></i></div>
-                    <h3>Filtro por Marca</h3>
-                    <p>Encuentra mecánicos especialistas según tu máquina: Pulsar, Honda, Yamaha, TVS, Zongshen o Royal Enfield.</p>
+                    <h3>Garage Virtual</h3>
+                    <p>Gestiona tu moto y recibe alertas preventivas de SOAT vencido y mantenimiento próximo a 30 días. No vuelvas a descuidar tu máquina.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon"><i class="fa-solid fa-comments"></i></div>
-                    <h3>Contacto Directo</h3>
-                    <p>Sin formularios ni esperas. Consulta disponibilidad de repuestos o cotiza directo al WhatsApp del taller.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
-                    <h3>Talleres Verificados</h3>
-                    <p>Información recomendada y validada por la propia comunidad y clubes de moteros del Norte.</p>
+                    <h3>Consulta por WhatsApp y Llamada</h3>
+                    <p>Contacta directo al taller por WhatsApp o llama con un toque. Repuestos, cotizaciones y auxilio sin formularios ni esperas.</p>
                 </div>
             </div>
         </section>
@@ -485,35 +480,9 @@
 
     <footer>
         <div class="container">
-            <p><strong>MotoRed Norte 🇵🇪</strong> — Impulsando la cultura y hermandad motera en La Libertad.</p>
-            <p style="margin-top: 5px;">Desarrollado por GuilleBiker</p>
+            <p><strong>MotoRedNorte © 🇵🇪</strong> — Impulsando la cultura y hermandad motera en La Libertad ®.</p>
+            <p style="margin-top: 5px;">Desarrollado por GuilleBiker™, ᴓᴥᴓ Contacto: gquintanillaparedes@gmail.com | +51 979737552</p>
         </div>
     </footer>
-
-    <!-- JS PARA EL CONTADOR REGRESIVO -->
-    <script>
-        // CONFIGURA AQUÍ LA FECHA DE LANZAMIENTO (Año, Mes-1, Día, Hora, Min)
-        const launchDate = new Date(2026, 9, 1, 20, 0, 0).getTime();
-        const timer = setInterval(function() {
-            const now = new Date().getTime();
-            const distance = launchDate - now;
-            if (distance < 0) {
-                clearInterval(timer);
-                document.getElementById("days").innerText = "00";
-                document.getElementById("hours").innerText = "00";
-                document.getElementById("minutes").innerText = "00";
-                document.getElementById("seconds").innerText = "00";
-                return;
-            }
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            document.getElementById("days").innerText = days < 10 ? '0' + days : days;
-            document.getElementById("hours").innerText = hours < 10 ? '0' + hours : hours;
-            document.getElementById("minutes").innerText = minutes < 10 ? '0' + minutes : minutes;
-            document.getElementById("seconds").innerText = seconds < 10 ? '0' + seconds : seconds;
-        }, 1000);
-    </script>
 </body>
 </html>
