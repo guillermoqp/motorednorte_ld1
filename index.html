@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MotoRed Norte | La Red de Talleres y Auxilio para Moteros</title>
-    <meta name="description" content="Directorio de talleres en tiempo real con geolocalización GPS, Garage Virtual con alertas de SOAT y mantenimiento, y consulta rápida por WhatsApp. Descarga el APK v1.0.0.">
+    <meta name="description" content="Directorio de talleres en tiempo real con geolocalización GPS, Garage Virtual con alertas de SOAT y mantenimiento, recuperación de contraseña y consulta rápida por WhatsApp. Descarga el APK v1.1.0.">
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="MotoRed Norte">
     <meta property="og:locale" content="es_PE">
     <meta property="og:title" content="MotoRed Norte | La Red de Talleres y Auxilio para Moteros">
-    <meta property="og:description" content="La 1ª App diseñada por y para moteros en La Libertad. Directorio de talleres en tiempo real, geolocalización GPS, Garage Virtual con alertas de SOAT y mantenimiento, y consulta rápida por WhatsApp. Descarga el APK v1.0.0.">
+    <meta property="og:description" content="La 1ª App diseñada por y para moteros en La Libertad. Directorio de talleres en tiempo real, geolocalización GPS, Garage Virtual con alertas de SOAT y mantenimiento, recuperación de contraseña y consulta rápida por WhatsApp. Descarga el APK v1.1.0.">
     <meta property="og:url" content="https://guillermoqp.github.io/motorednorte_ld1/">
     <meta property="og:image" content="https://guillermoqp.github.io/motorednorte_ld1/logo2.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="MotoRed Norte | La Red de Talleres y Auxilio para Moteros">
-    <meta name="twitter:description" content="La 1ª App diseñada por y para moteros en La Libertad. Directorio de talleres en tiempo real, geolocalización GPS, Garage Virtual con alertas de SOAT y mantenimiento, y consulta rápida por WhatsApp. Descarga el APK v1.0.0.">
+    <meta name="twitter:description" content="La 1ª App diseñada por y para moteros en La Libertad. Directorio de talleres en tiempo real, geolocalización GPS, Garage Virtual con alertas de SOAT y mantenimiento, recuperación de contraseña y consulta rápida por WhatsApp. Descarga el APK v1.1.0.">
     <meta name="twitter:image" content="https://guillermoqp.github.io/motorednorte_ld1/logo2.png">
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -121,6 +121,13 @@
 
         body {
             background-color: var(--asphalt-dark);
+            background-image:
+                linear-gradient(180deg, rgba(18,18,18,0.92) 0%, rgba(18,18,18,0.80) 100%),
+                url('logo1.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             color: var(--text-white);
             line-height: 1.6;
             overflow-x: hidden;
@@ -401,7 +408,8 @@
                 <span class="logo-text">MotoRed Norte</span>
             </div>
             <div>
-                <span class="badge-location"><i class="fa-solid fa-location-dot"></i> Trujillo • Virú • Chao</span>
+                <span class="badge-location"><i class="fa-solid fa-location-dot"></i>  Trujillo • Virú • Chao • Guadalupito</span></br>
+				<span class="badge-location">**Pronto: Chiclayo y Chimbote</span>
             </div>
         </div>
     </header>
@@ -409,7 +417,7 @@
     <main class="container">
         <section class="hero">
             <h1>Nunca más te quedes<br><span>tirado en la ruta.</span></h1>
-            <p class="subtitle">La 1ª App diseñada por y para moteros en La Libertad. Directorio de talleres en tiempo real con geolocalización GPS, Garage Virtual con alertas de SOAT y mantenimiento, y consulta rápida por WhatsApp o llamada.</p>
+            <p class="subtitle">La 1ª App diseñada por y para moteros en La Libertad. Directorio de talleres en tiempo real con geolocalización GPS, Garage Virtual con alertas de SOAT y mantenimiento, recuperación de contraseña y consulta rápida por WhatsApp o llamada.</p>
 
             <div class="hero-logo">
                 <img src="logo2.png" alt="MotoRed Norte" class="hero-logo-img">
@@ -420,12 +428,12 @@
 
                 <div class="cta-container">
                     <!-- BOTÓN PRINCIPAL: DESCARGAR APK -->
-                    <a href="https://github.com/guillermoqp/motorednorte_ld1/releases/download/v1.0.0/app-release.apk"
+                    <a href="https://github.com/guillermoqp/motorednorte_ld1/releases/download/v1.1.0/motorednorte_v1.1.0.apk"
                        target="_blank"
                        class="btn btn-download"
-                       onclick="trackEvent('click_download_apk', 'conversion', 'Descargar APK v1.0.0')">
+                       onclick="trackEvent('click_download_apk', 'conversion', 'Descargar APK v1.1.0')">
                         <i class="fa-solid fa-download fa-xl"></i>
-                        <span>Descargar APK v1.0.0 (23.5 MB)</span>
+                        <span>Descargar APK v1.1.0 motorednorte_v1.1.0.apk (24.1 MB)</span> 
                     </a>
 
                     <!-- BOTÓN: GRUPO DE WHATSAPP -->
@@ -446,8 +454,7 @@
                         <span>Recomendar o Registrar un Taller</span>
                     </a>
                 </div>
-
-                <p class="social-proof">📱 APK v1.0.0 para Android (arm64-v8a). Descárgala, instálala y únete a la red de moteros del Norte.</p>
+                <p class="social-proof">📱 APK v1.1.0 para Android (arm64-v8a). Descárgala, instálala y únete a la red de moteros del Norte. *(Recomendado para la mayoría de teléfonos modernos)*</p>
             </div>
         </section>
 
@@ -465,14 +472,29 @@
                     <p>Captura tus coordenadas GPS para recomendar talleres y localizar el más cercano en Trujillo, Virú y Chao.</p>
                 </div>
                 <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-star"></i></div>
+                    <h3>Recomienda Talleres con Calificación</h3>
+                    <p>Propón un taller con captura de coordenadas GPS y calificación de 1 a 5, ampliando la red de la comunidad motera.</p>
+                </div>
+                <div class="feature-card">
                     <div class="feature-icon"><i class="fa-solid fa-motorcycle"></i></div>
                     <h3>Garage Virtual</h3>
-                    <p>Gestiona tu moto y recibe alertas preventivas de SOAT vencido y mantenimiento próximo a 30 días. No vuelvas a descuidar tu máquina.</p>
+                    <p>Gestiona tu moto con foto, marca y placa; recibe alertas preventivas de SOAT vencido y mantenimiento próximo. No vuelvas a descuidar tu máquina.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon"><i class="fa-solid fa-comments"></i></div>
                     <h3>Consulta por WhatsApp y Llamada</h3>
                     <p>Contacta directo al taller por WhatsApp o llama con un toque. Repuestos, cotizaciones y auxilio sin formularios ni esperas.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-key"></i></div>
+                    <h3>Recupera tu Contraseña</h3>
+                    <p>Olvidaste tu clave: recupera el acceso desde el propio enlace directo (deep link) sin salir de la app.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-bell"></i></div>
+                    <h3>Alertas y Resumen de Bienvenida</h3>
+                    <p>Post-login con resumen de tu cuenta y alertas preventivas de SOAT y mantenimiento, con perfil sincronizado automáticamente.</p>
                 </div>
             </div>
         </section>
